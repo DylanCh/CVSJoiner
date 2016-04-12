@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixCVSJoiner", "UnixCVSJoiner\UnixCVSJoiner.csproj", "{E8D1102A-5C33-49CC-8030-2648E59B8082}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixCVSJoiner.Console", "UnixCVSJoiner\UnixCVSJoiner.Console.csproj", "{4E089214-D654-4FC5-9F59-6620DDBA46D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixCSVJoiner.WinForm", "UnixCSVJoiner.WinForm\UnixCSVJoiner.WinForm.csproj", "{3B14AC13-5486-4CAF-A5A8-9957D311E0B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +11,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E8D1102A-5C33-49CC-8030-2648E59B8082}.Debug|x86.ActiveCfg = Debug|x86
-		{E8D1102A-5C33-49CC-8030-2648E59B8082}.Debug|x86.Build.0 = Debug|x86
-		{E8D1102A-5C33-49CC-8030-2648E59B8082}.Release|x86.ActiveCfg = Release|x86
-		{E8D1102A-5C33-49CC-8030-2648E59B8082}.Release|x86.Build.0 = Release|x86
+		{4E089214-D654-4FC5-9F59-6620DDBA46D8}.Debug|x86.ActiveCfg = Debug|x86
+		{4E089214-D654-4FC5-9F59-6620DDBA46D8}.Debug|x86.Build.0 = Debug|x86
+		{4E089214-D654-4FC5-9F59-6620DDBA46D8}.Release|x86.ActiveCfg = Release|x86
+		{4E089214-D654-4FC5-9F59-6620DDBA46D8}.Release|x86.Build.0 = Release|x86
+		{3B14AC13-5486-4CAF-A5A8-9957D311E0B7}.Debug|x86.ActiveCfg = Debug|x86
+		{3B14AC13-5486-4CAF-A5A8-9957D311E0B7}.Debug|x86.Build.0 = Debug|x86
+		{3B14AC13-5486-4CAF-A5A8-9957D311E0B7}.Release|x86.ActiveCfg = Release|x86
+		{3B14AC13-5486-4CAF-A5A8-9957D311E0B7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
