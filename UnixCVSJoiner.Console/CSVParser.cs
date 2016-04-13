@@ -9,42 +9,41 @@ namespace UnixCVSJoiner
     
     class CSVParser
     {
-        private List<int> key;
-        private List<string> value1;
+        private string line = string.Empty;
+        private List<KeyValuePair<int, string>> dic = new List<KeyValuePair<int, string>>();
+
+        private StreamReader sr;
+        private StreamWriter sw;
 
         public CSVParser(string path){
-            key = new List<int>();
-            value1 = new List<string>();
-            readCSV(path);
-        }
-
-        private void readCSV(string path)  {
-            StreamReader reader;
+            //sw = new StreamWriter(path);
             try
             {
-                 reader = new StreamReader(File.OpenRead(path));
-                 parseCSV(reader);
+                sr = new StreamReader(File.OpenRead(path));
+                parseCVS();
             }
-            catch (FileNotFoundException fNFE) {
-                Console.WriteLine(fNFE.Message);
-            }   
+            catch (FileNotFoundException e) {
+                Console.WriteLine(e.Message);
+            }
         }
 
-        private void parseCSV(StreamReader reader){
-            while (!reader.EndOfStream)
+        // parse the CVS into a list of key-value pairs and 
+        private bool parseCVS() {
+            try
             {
-                try
+                while (!sr.EndOfStream)
                 {
-                    var line = reader.ReadLine();
+                    line = sr.ReadLine();
                     var values = line.Split(',');
 
-                    key.Add(int.Parse(values[0]));
-                    value1.Add((values[1].ToString()));
+                    // add keys and values to the list of key value pair
+                    dic.Add(new KeyValuePair<int,string>(int.Parse(values[0]),values[1].ToString()));
                 }
-                catch (Exception e)
-                {
-                    Console.Write(e.Message);
-                }
+                return true;
+            }
+            catch (Exception e) {
+                Console.Write(e.Message);
+                return false;
             }
         }
     }
